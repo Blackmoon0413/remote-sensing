@@ -118,11 +118,15 @@ def build_release() -> None:
                 if f.exists():
                     shutil.copy(f, res / "predictions" / d.name / "test_scores_own_code.json")
     shutil.copytree(V2 / "outputs" / "audit", res / "audit")
+    # original-prompt VLM audits (Section 5.9) and per-sample evidence/decisions (s23) for every audit file
+    shutil.copytree(V2 / "outputs" / "audit_origprompt", res / "audit_origprompt")
+    shutil.copytree(V2 / "outputs" / "audit_per_sample", res / "audit_per_sample")
     if (V2 / "outputs" / "feasibility").exists():
         shutil.copytree(V2 / "outputs" / "feasibility", res / "feasibility")
-    for f in ("main_results.json", "summary.md", "reproduction_report.json", "knn_change_state.json"):
+    for f in ("main_results.json", "summary.md", "reproduction_report.json", "knn_change_state.json", "sanity.json"):
         if (V2 / "outputs" / f).exists():
             shutil.copy(V2 / "outputs" / f, res / f)
+    shutil.copy(V2 / "outputs" / "prompt_test" / "summary.json", res / "prompt_test_summary.json")
     shutil.copytree(V2 / "outputs" / "figs", res / "figs")
     # labels only (pair name, split, change flag); the reference captions belong to the datasets and are not redistributed
     (res / "labels").mkdir(exist_ok=True)
@@ -133,7 +137,7 @@ def build_release() -> None:
     shutil.copy(V2 / "submission" / "release_README.md", repo / "README.md")
     shutil.copy(V2 / "submission" / "release_requirements.txt", repo / "requirements.txt")
     zipdir(repo, rel / f"{REPO}.zip", REPO)
-    # large artefacts, attached to the GitHub release (too big for the git repository)
+    # large artefacts kept locally only (features can be regenerated with s7; checkpoints on request)
     zf = rel / "features.zip"
     if not zf.exists():
         zipdir(V2 / "outputs" / "features", zf, "features")

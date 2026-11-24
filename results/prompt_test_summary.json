@@ -1,0 +1,314 @@
+{
+ "qwen3vlorig|levir_cc": {
+  "prompt": "original prompt",
+  "top_no_change_outputs": [
+   [
+    "the scene is the same as before",
+    58
+   ],
+   [
+    "the vegetation patterns have remained unchanged between the two images",
+    1
+   ]
+  ],
+  "base": {
+   "binary": {
+    "TP": 961,
+    "FP": 909,
+    "TN": 56,
+    "FN": 3,
+    "acc": 52.72,
+    "prec": 51.39,
+    "rec": 99.69,
+    "f1": 67.82,
+    "halluc_rate": 94.2
+   },
+   "all": {
+    "B4": 3.81,
+    "CIDEr": 8.43
+   },
+   "changed": {
+    "B4": 4.45,
+    "CIDEr": 3.62
+   }
+  },
+  "audit": {
+   "t_c": 0.0275,
+   "acts": 707,
+   "acts_correct": 668,
+   "binary": {
+    "TP": 922,
+    "FP": 241,
+    "TN": 724,
+    "FN": 42,
+    "acc": 85.33,
+    "prec": 79.28,
+    "rec": 95.64,
+    "f1": 86.69,
+    "halluc_rate": 24.97
+   },
+   "all": {
+    "B4": 18.95,
+    "CIDEr": 78.58
+   },
+   "changed": {
+    "B4": 4.42,
+    "CIDEr": 3.43
+   },
+   "replacement": "the scene is the same as before"
+  },
+  "evidence_p05": {
+   "TP": 843,
+   "FP": 89,
+   "TN": 876,
+   "FN": 121,
+   "acc": 89.11,
+   "prec": 90.45,
+   "rec": 87.45,
+   "f1": 88.92,
+   "halluc_rate": 9.22
+  },
+  "flags5": {
+   "threshold_from_val": 0.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 58,
+   "missed_found": 3,
+   "missed_total": 3,
+   "recall": 100.0,
+   "precision": 5.2,
+   "random_precision": 5.1
+  }
+ },
+ "qwen3vl|levir_cc": {
+  "prompt": "neutral prompt (main)",
+  "top_no_change_outputs": [
+   [
+    "no change is visible between the two images",
+    285
+   ],
+   [
+    "the second image shows a more detailed and enhanced view of the area with improved color saturation and contrast making vegetation and structures more distinct while the layout and features of the landscape remain unchanged from the",
+    1
+   ]
+  ],
+  "base": {
+   "binary": {
+    "TP": 891,
+    "FP": 752,
+    "TN": 213,
+    "FN": 73,
+    "acc": 57.23,
+    "prec": 54.23,
+    "rec": 92.43,
+    "f1": 68.35,
+    "halluc_rate": 77.93
+   },
+   "all": {
+    "B4": 2.88,
+    "CIDEr": 2.93
+   },
+   "changed": {
+    "B4": 4.59,
+    "CIDEr": 2.94
+   }
+  },
+  "audit": {
+   "t_c": 0.0032,
+   "acts": 426,
+   "acts_correct": 411,
+   "binary": {
+    "TP": 876,
+    "FP": 341,
+    "TN": 624,
+    "FN": 88,
+    "acc": 77.76,
+    "prec": 71.98,
+    "rec": 90.87,
+    "f1": 80.33,
+    "halluc_rate": 35.34
+   },
+   "all": {
+    "B4": 3.73,
+    "CIDEr": 4.37
+   },
+   "changed": {
+    "B4": 4.53,
+    "CIDEr": 2.83
+   },
+   "replacement": "no change is visible between the two images"
+  },
+  "evidence_p05": {
+   "TP": 778,
+   "FP": 86,
+   "TN": 879,
+   "FN": 186,
+   "acc": 85.9,
+   "prec": 90.05,
+   "rec": 80.71,
+   "f1": 85.12,
+   "halluc_rate": 8.91
+  },
+  "flags5": {
+   "threshold_from_val": 0.0136,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 86,
+   "missed_found": 71,
+   "missed_total": 73,
+   "recall": 97.3,
+   "precision": 82.6,
+   "random_precision": 25.5
+  }
+ },
+ "qwen3vlorig|dubai_cc": {
+  "prompt": "original prompt",
+  "top_no_change_outputs": [
+   [
+    "the scene is the same as before",
+    99
+   ]
+  ],
+  "base": {
+   "binary": {
+    "TP": 40,
+    "FP": 11,
+    "TN": 42,
+    "FN": 57,
+    "acc": 54.67,
+    "prec": 78.43,
+    "rec": 41.24,
+    "f1": 54.05,
+    "halluc_rate": 20.75
+   },
+   "all": {
+    "B4": 0.0,
+    "CIDEr": 3.53
+   },
+   "changed": {
+    "B4": 0.0,
+    "CIDEr": 1.28
+   }
+  },
+  "audit": {
+   "t_c": null,
+   "acts": 0,
+   "acts_correct": 0,
+   "binary": {
+    "TP": 40,
+    "FP": 11,
+    "TN": 42,
+    "FN": 57,
+    "acc": 54.67,
+    "prec": 78.43,
+    "rec": 41.24,
+    "f1": 54.05,
+    "halluc_rate": 20.75
+   },
+   "all": {
+    "B4": 0.0,
+    "CIDEr": 3.53
+   },
+   "changed": {
+    "B4": 0.0,
+    "CIDEr": 1.28
+   },
+   "replacement": "the scene is the same as before"
+  },
+  "evidence_p05": {
+   "TP": 38,
+   "FP": 5,
+   "TN": 48,
+   "FN": 59,
+   "acc": 57.33,
+   "prec": 88.37,
+   "rec": 39.18,
+   "f1": 54.29,
+   "halluc_rate": 9.43
+  },
+  "flags5": {
+   "threshold_from_val": 1.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 8,
+   "missed_found": 8,
+   "missed_total": 57,
+   "recall": 14.0,
+   "precision": 100.0,
+   "random_precision": 57.6
+  }
+ },
+ "qwen3vl|dubai_cc": {
+  "prompt": "neutral prompt (main)",
+  "top_no_change_outputs": [
+   [
+    "no change is visible between the two images",
+    143
+   ]
+  ],
+  "base": {
+   "binary": {
+    "TP": 6,
+    "FP": 1,
+    "TN": 52,
+    "FN": 91,
+    "acc": 38.67,
+    "prec": 85.71,
+    "rec": 6.19,
+    "f1": 11.54,
+    "halluc_rate": 1.89
+   },
+   "all": {
+    "B4": 0.0,
+    "CIDEr": 5.28
+   },
+   "changed": {
+    "B4": 0.0,
+    "CIDEr": 1.34
+   }
+  },
+  "audit": {
+   "t_c": null,
+   "acts": 0,
+   "acts_correct": 0,
+   "binary": {
+    "TP": 6,
+    "FP": 1,
+    "TN": 52,
+    "FN": 91,
+    "acc": 38.67,
+    "prec": 85.71,
+    "rec": 6.19,
+    "f1": 11.54,
+    "halluc_rate": 1.89
+   },
+   "all": {
+    "B4": 0.0,
+    "CIDEr": 5.28
+   },
+   "changed": {
+    "B4": 0.0,
+    "CIDEr": 1.34
+   },
+   "replacement": "no change is visible between the two images"
+  },
+  "evidence_p05": {
+   "TP": 6,
+   "FP": 0,
+   "TN": 53,
+   "FN": 91,
+   "acc": 39.33,
+   "prec": 100.0,
+   "rec": 6.19,
+   "f1": 11.65,
+   "halluc_rate": 0.0
+  },
+  "flags5": {
+   "threshold_from_val": 1.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 5,
+   "missed_found": 5,
+   "missed_total": 91,
+   "recall": 5.5,
+   "precision": 100.0,
+   "random_precision": 63.6
+  }
+ }
+}

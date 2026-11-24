@@ -1,0 +1,177 @@
+{
+ "captioner": "qwen3vl",
+ "dataset": "levir_cc",
+ "encoder": "pixdiff",
+ "evidence": "lr",
+ "no_change_sentence": "the scene is the same as before",
+ "precision_target": 0.9,
+ "correction": {
+  "threshold_from_val": null,
+  "test_acts": 0,
+  "test_acts_correct": 0,
+  "scores": {
+   "B1": 22.6,
+   "B2": 11.18,
+   "B3": 6.07,
+   "B4": 3.81,
+   "METEOR": 14.42,
+   "ROUGE_L": 23.65,
+   "CIDEr": 8.43
+  },
+  "binary": {
+   "TP": 961,
+   "FP": 909,
+   "TN": 56,
+   "FN": 3,
+   "acc": 52.72,
+   "prec": 51.39,
+   "rec": 99.69,
+   "f1": 67.82,
+   "halluc_rate": 94.2
+  },
+  "significance": null,
+  "val": null
+ },
+ "correction_cider_opt": {
+  "threshold_from_val": 0.9757,
+  "test_acts": 1870,
+  "test_acts_correct": 909,
+  "scores": {
+   "B1": 64.44,
+   "B2": 56.5,
+   "B3": 53.04,
+   "B4": 51.37,
+   "METEOR": 27.75,
+   "ROUGE_L": 60.54,
+   "CIDEr": 101.82
+  },
+  "binary": {
+   "TP": 0,
+   "FP": 0,
+   "TN": 965,
+   "FN": 964,
+   "acc": 50.03,
+   "prec": 0.0,
+   "rec": 0.0,
+   "f1": 0.0,
+   "halluc_rate": 0.0
+  },
+  "significance": {
+   "B4": {
+    "delta": 46.291,
+    "ci95": [
+     44.072,
+     48.725
+    ],
+    "perm_p": 0.0,
+    "n_changed": 1870
+   },
+   "METEOR": {
+    "delta": 38.667,
+    "ci95": [
+     36.363,
+     40.766
+    ],
+    "perm_p": 0.0,
+    "n_changed": 1870
+   },
+   "ROUGE_L": {
+    "delta": 36.894,
+    "ci95": [
+     34.936,
+     39.091
+    ],
+    "perm_p": 0.0,
+    "n_changed": 1870
+   },
+   "CIDEr": {
+    "delta": 93.389,
+    "ci95": [
+     88.421,
+     97.698
+    ],
+    "perm_p": 0.0,
+    "n_changed": 1868
+   }
+  },
+  "val": {
+   "cider_base": 9.01,
+   "cider_best": 101.18
+  }
+ },
+ "test_scores": {
+  "base": {
+   "B1": 22.6,
+   "B2": 11.18,
+   "B3": 6.07,
+   "B4": 3.81,
+   "METEOR": 14.42,
+   "ROUGE_L": 23.65,
+   "CIDEr": 8.43
+  },
+  "audited": {
+   "B1": 22.6,
+   "B2": 11.18,
+   "B3": 6.07,
+   "B4": 3.81,
+   "METEOR": 14.42,
+   "ROUGE_L": 23.65,
+   "CIDEr": 8.43
+  },
+  "perfect_c2n": {
+   "B1": 46.75,
+   "B2": 36.43,
+   "B3": 30.31,
+   "B4": 26.34,
+   "METEOR": 29.97,
+   "ROUGE_L": 63.36,
+   "CIDEr": 104.08
+  }
+ },
+ "binary": {
+  "base": {
+   "TP": 961,
+   "FP": 909,
+   "TN": 56,
+   "FN": 3,
+   "acc": 52.72,
+   "prec": 51.39,
+   "rec": 99.69,
+   "f1": 67.82,
+   "halluc_rate": 94.2
+  },
+  "audited": {
+   "TP": 961,
+   "FP": 909,
+   "TN": 56,
+   "FN": 3,
+   "acc": 52.72,
+   "prec": 51.39,
+   "rec": 99.69,
+   "f1": 67.82,
+   "halluc_rate": 94.2
+  }
+ },
+ "flags": {
+  "5%": {
+   "threshold_from_val": 0.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 59,
+   "missed_found": 3,
+   "missed_total": 3,
+   "recall": 100.0,
+   "precision": 5.1,
+   "random_precision": 5.1
+  },
+  "10%": {
+   "threshold_from_val": 0.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 59,
+   "missed_found": 3,
+   "missed_total": 3,
+   "recall": 100.0,
+   "precision": 5.1,
+   "random_precision": 5.1
+  }
+ }
+}

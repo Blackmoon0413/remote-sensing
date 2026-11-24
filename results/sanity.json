@@ -1,0 +1,203 @@
+{
+ "template_is_a_reference": 965,
+ "const_template": {
+  "all": {
+   "B4": 51.42,
+   "CIDEr": 101.93
+  },
+  "acc": 50.03
+ },
+ "evidence_only": {
+  "TP": 845,
+  "FP": 89,
+  "TN": 876,
+  "FN": 119,
+  "acc": 89.22,
+  "prec": 90.47,
+  "rec": 87.66,
+  "f1": 89.04,
+  "halluc_rate": 9.22
+ },
+ "captioners": {
+  "rscama": {
+   "base": {
+    "changed": {
+     "B4": 39.57,
+     "CIDEr": 62.51
+    },
+    "unchanged": {
+     "B4": 98.51,
+     "CIDEr": 0.0
+    }
+   },
+   "audited": {
+    "changed": {
+     "B4": 39.57,
+     "CIDEr": 62.51
+    },
+    "unchanged": {
+     "B4": 98.51,
+     "CIDEr": 0.0
+    }
+   },
+   "no_change_sentence": "the scene is the same as before",
+   "evidence_p05_rule": {
+    "TP": 779,
+    "FP": 3,
+    "TN": 962,
+    "FN": 185,
+    "acc": 90.25,
+    "prec": 99.62,
+    "rec": 80.81,
+    "f1": 89.23,
+    "halluc_rate": 0.31
+   },
+   "accuracy": {
+    "base": 92.28,
+    "after_correction": 92.28,
+    "after_5pct_flags": 94.87,
+    "after_5pct_random_review_expected": 92.94,
+    "reviewed": 102
+   }
+  },
+  "promptcc": {
+   "base": {
+    "changed": {
+     "B4": 39.38,
+     "CIDEr": 58.06
+    },
+    "unchanged": {
+     "B4": 96.46,
+     "CIDEr": 0.0
+    }
+   },
+   "audited": {
+    "changed": {
+     "B4": 39.38,
+     "CIDEr": 58.06
+    },
+    "unchanged": {
+     "B4": 96.46,
+     "CIDEr": 0.0
+    }
+   },
+   "no_change_sentence": "the scene is the same as before",
+   "evidence_p05_rule": {
+    "TP": 776,
+    "FP": 10,
+    "TN": 955,
+    "FN": 188,
+    "acc": 89.74,
+    "prec": 98.73,
+    "rec": 80.5,
+    "f1": 88.69,
+    "halluc_rate": 1.04
+   },
+   "accuracy": {
+    "base": 91.6,
+    "after_correction": 91.6,
+    "after_5pct_flags": 94.66,
+    "after_5pct_random_review_expected": 92.4,
+    "reviewed": 121
+   }
+  },
+  "change3d": {
+   "base": {
+    "changed": {
+     "B4": 38.24,
+     "CIDEr": 61.75
+    },
+    "unchanged": {
+     "B4": 94.09,
+     "CIDEr": 0.0
+    }
+   },
+   "audited": {
+    "changed": {
+     "B4": 38.24,
+     "CIDEr": 61.75
+    },
+    "unchanged": {
+     "B4": 94.09,
+     "CIDEr": 0.0
+    }
+   },
+   "no_change_sentence": "the scene is the same as before",
+   "evidence_p05_rule": {
+    "TP": 826,
+    "FP": 13,
+    "TN": 952,
+    "FN": 138,
+    "acc": 92.17,
+    "prec": 98.45,
+    "rec": 85.68,
+    "f1": 91.63,
+    "halluc_rate": 1.35
+   },
+   "accuracy": {
+    "base": 94.25,
+    "after_correction": 94.25,
+    "after_5pct_flags": 95.23,
+    "after_5pct_random_review_expected": 94.58,
+    "reviewed": 96
+   }
+  },
+  "qwen3vl": {
+   "base": {
+    "changed": {
+     "B4": 4.45,
+     "CIDEr": 3.62
+    },
+    "unchanged": {
+     "B4": 2.68,
+     "CIDEr": 0.0
+    }
+   },
+   "audited": {
+    "changed": {
+     "B4": 4.42,
+     "CIDEr": 3.43
+    },
+    "unchanged": {
+     "B4": 44.3,
+     "CIDEr": 0.0
+    }
+   },
+   "no_change_sentence": "the scene is the same as before",
+   "evidence_p05_rule": {
+    "TP": 843,
+    "FP": 89,
+    "TN": 876,
+    "FN": 121,
+    "acc": 89.11,
+    "prec": 90.45,
+    "rec": 87.45,
+    "f1": 88.92,
+    "halluc_rate": 9.22
+   },
+   "accuracy": {
+    "base": 52.72,
+    "after_correction": 85.33,
+    "after_5pct_flags": 85.48,
+    "after_5pct_random_review_expected": 85.48,
+    "reviewed": 58
+   },
+   "wording": {
+    "nothing has changed in this area": {
+     "all": {
+      "B4": 6.99,
+      "CIDEr": 13.28
+     },
+     "is_reference": 0
+    },
+    "no change is visible between the two images": {
+     "all": {
+      "B4": 5.81,
+      "CIDEr": 10.75
+     },
+     "is_reference": 0
+    }
+   }
+  }
+ }
+}
