@@ -1,0 +1,194 @@
+{
+  "n_missed": 137,
+  "redecoded_still_no_change": 0,
+  "corpus_base": {
+    "B1": 85.94,
+    "B2": 78.05,
+    "B3": 71.19,
+    "B4": 65.55,
+    "METEOR": 40.95,
+    "ROUGE_L": 75.85,
+    "CIDEr": 138.86
+  },
+  "corpus_oracle_n2c": {
+    "B1": 86.52,
+    "B2": 78.53,
+    "B3": 71.56,
+    "B4": 65.85,
+    "METEOR": 41.31,
+    "ROUGE_L": 76.45,
+    "CIDEr": 139.67
+  },
+  "missed_subset_base": {
+    "B1": 43.59,
+    "B2": 21.08,
+    "B3": 6.79,
+    "B4": 0.0,
+    "METEOR": 11.68,
+    "ROUGE_L": 23.88,
+    "CIDEr": 0.91
+  },
+  "missed_subset_redecoded": {
+    "B1": 52.55,
+    "B2": 28.95,
+    "B3": 13.6,
+    "B4": 6.91,
+    "METEOR": 12.43,
+    "ROUGE_L": 32.34,
+    "CIDEr": 12.26
+  },
+  "examples_missed": [
+    {
+      "name": "test_000031",
+      "ref": "some plants have been removed",
+      "base": "the scene is the same as before",
+      "redecoded": "the forest is the scene disappear"
+    },
+    {
+      "name": "test_000045",
+      "ref": "a completed villa has been constructed at the bottom right corner",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the scene"
+    },
+    {
+      "name": "test_000049",
+      "ref": "a house appears at the top right corner",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the forest"
+    },
+    {
+      "name": "test_000050",
+      "ref": "two houses are built at the top",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the scene is the scene"
+    },
+    {
+      "name": "test_000082",
+      "ref": "the plants grow lusher and a house appears on the left",
+      "base": "the scene is the same as before",
+      "redecoded": "the woods become the road has been removed"
+    },
+    {
+      "name": "test_000085",
+      "ref": "a house has been built in the woods at the bottom left corner",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000088",
+      "ref": "a house has been built in the clearing on the right",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000091",
+      "ref": "a bungalow appears in the woods on the left",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the existing ones"
+    },
+    {
+      "name": "test_000092",
+      "ref": "a house has been built on the right",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000096",
+      "ref": "a villa appears on the side of the road on the right",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000111",
+      "ref": "a building has been added to the line at the bottom",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000115",
+      "ref": "two villas appear on both sides of the road",
+      "base": "the scene is the same as before",
+      "redecoded": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000124",
+      "ref": "a house has been constructed at the bottom left corner",
+      "base": "the scene is the same as before",
+      "redecoded": "the road is the scene is the scene"
+    },
+    {
+      "name": "test_000175",
+      "ref": "a villa appears next to the square",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the existing ones"
+    },
+    {
+      "name": "test_000205",
+      "ref": "a completed villa appears at the top left corner",
+      "base": "the scene is the same as before",
+      "redecoded": "the house is the woods at the top left corner of the scene"
+    }
+  ],
+  "examples_stable_forced": [
+    {
+      "name": "test_000001",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000002",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000003",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000005",
+      "forced": "the forest is the road is the scene"
+    },
+    {
+      "name": "test_000006",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000007",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000008",
+      "forced": "the forest is the forest has been removed"
+    },
+    {
+      "name": "test_000009",
+      "forced": "the woods is the scene is removed"
+    },
+    {
+      "name": "test_000010",
+      "forced": "the additional scene is the scene"
+    },
+    {
+      "name": "test_000011",
+      "forced": "the forest is the scene is the scene"
+    },
+    {
+      "name": "test_000012",
+      "forced": "the forest is the forest has been removed"
+    },
+    {
+      "name": "test_000013",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000014",
+      "forced": "the forest is the forest has been removed"
+    },
+    {
+      "name": "test_000015",
+      "forced": "the is the scene is the scene"
+    },
+    {
+      "name": "test_000016",
+      "forced": "the is the scene is the scene"
+    }
+  ]
+}

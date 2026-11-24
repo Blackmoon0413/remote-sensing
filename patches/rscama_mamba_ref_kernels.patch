@@ -1,0 +1,22 @@
+--- a/mamba_block.py
++++ b/mamba_block.py
+@@ -5,6 +5,10 @@
+ 
+ # FIXME
+ from transformers.models.mamba.modeling_mamba import logger, is_fast_path_available, mamba_inner_fn, causal_conv1d_fn, causal_conv1d_update, selective_state_update, selective_scan_fn
++# PATCH(RSICC): fall back to pure-PyTorch reference kernels when fused kernels are missing
++if not is_fast_path_available:
++    from model.mamba_ref_ops import causal_conv1d_fn, selective_scan_fn
++    is_fast_path_available = True
+ from transformers.models.mamba.modeling_mamba import MambaRMSNorm, MambaPreTrainedModel, MambaCache, MambaOutput, MambaMixer
+ from transformers import MambaConfig
+ from transformers.activations import ACT2FN
+@@ -176,7 +180,7 @@
+ 
+ 
+     def forward(self, hidden_states, hidden_states_2, cache_params: Optional[MambaCache] = None, cache_params_2: Optional[MambaCache] = None):
+-        if is_fast_path_available and "cuda" in self.x_proj.weight.device.type:
++        if is_fast_path_available:  # PATCH(RSICC): reference kernels also run on CPU
+             return self.cuda_kernels_forward(hidden_states, hidden_states_2, cache_params, cache_params_2)
+         else:
+             raise NotImplementedError("The fast path is not available")

@@ -1,0 +1,140 @@
+{
+ "captioner": "promptcc",
+ "dataset": "levir_cc",
+ "encoder": "rclip_l14",
+ "evidence": "lr",
+ "no_change_sentence": "the scene is the same as before",
+ "precision_target": 0.9,
+ "correction": {
+  "threshold_from_val": null,
+  "test_acts": 0,
+  "test_acts_correct": 0,
+  "scores": {
+   "B1": 85.88,
+   "B2": 77.95,
+   "B3": 70.99,
+   "B4": 65.04,
+   "METEOR": 39.87,
+   "ROUGE_L": 74.62,
+   "CIDEr": 135.74
+  },
+  "binary": {
+   "TP": 827,
+   "FP": 25,
+   "TN": 940,
+   "FN": 137,
+   "acc": 91.6,
+   "prec": 97.07,
+   "rec": 85.79,
+   "f1": 91.08,
+   "halluc_rate": 2.59
+  },
+  "significance": null,
+  "val": null
+ },
+ "correction_cider_opt": {
+  "threshold_from_val": null,
+  "test_acts": 0,
+  "test_acts_correct": 0,
+  "scores": {
+   "B1": 85.88,
+   "B2": 77.95,
+   "B3": 70.99,
+   "B4": 65.04,
+   "METEOR": 39.87,
+   "ROUGE_L": 74.62,
+   "CIDEr": 135.74
+  },
+  "binary": {
+   "TP": 827,
+   "FP": 25,
+   "TN": 940,
+   "FN": 137,
+   "acc": 91.6,
+   "prec": 97.07,
+   "rec": 85.79,
+   "f1": 91.08,
+   "halluc_rate": 2.59
+  },
+  "significance": null,
+  "val": {
+   "cider_base": 137.44,
+   "cider_best": 137.44
+  }
+ },
+ "test_scores": {
+  "base": {
+   "B1": 85.88,
+   "B2": 77.95,
+   "B3": 70.99,
+   "B4": 65.04,
+   "METEOR": 39.87,
+   "ROUGE_L": 74.62,
+   "CIDEr": 135.74
+  },
+  "audited": {
+   "B1": 85.88,
+   "B2": 77.95,
+   "B3": 70.99,
+   "B4": 65.04,
+   "METEOR": 39.87,
+   "ROUGE_L": 74.62,
+   "CIDEr": 135.74
+  },
+  "perfect_c2n": {
+   "B1": 86.55,
+   "B2": 78.81,
+   "B3": 71.97,
+   "B4": 66.08,
+   "METEOR": 40.43,
+   "ROUGE_L": 75.65,
+   "CIDEr": 138.35
+  }
+ },
+ "binary": {
+  "base": {
+   "TP": 827,
+   "FP": 25,
+   "TN": 940,
+   "FN": 137,
+   "acc": 91.6,
+   "prec": 97.07,
+   "rec": 85.79,
+   "f1": 91.08,
+   "halluc_rate": 2.59
+  },
+  "audited": {
+   "TP": 827,
+   "FP": 25,
+   "TN": 940,
+   "FN": 137,
+   "acc": 91.6,
+   "prec": 97.07,
+   "rec": 85.79,
+   "f1": 91.08,
+   "halluc_rate": 2.59
+  }
+ },
+ "flags": {
+  "5%": {
+   "threshold_from_val": 0.7623,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 111,
+   "missed_found": 56,
+   "missed_total": 137,
+   "recall": 40.9,
+   "precision": 50.5,
+   "random_precision": 12.7
+  },
+  "10%": {
+   "threshold_from_val": 0.2409,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 208,
+   "missed_found": 79,
+   "missed_total": 137,
+   "recall": 57.7,
+   "precision": 38.0,
+   "random_precision": 12.7
+  }
+ }
+}

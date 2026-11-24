@@ -1,0 +1,12 @@
+--- a/caption_decoder.py
++++ b/caption_decoder.py
+@@ -392,7 +392,8 @@
+ 
+     def forward(self, tgt: Tensor, memory: Tensor, tgt_mask: Optional[Tensor] = None,
+                 memory_mask: Optional[Tensor] = None, tgt_key_padding_mask: Optional[Tensor] = None,
+-                memory_key_padding_mask: Optional[Tensor] = None) -> Tensor:
++                memory_key_padding_mask: Optional[Tensor] = None,
++                tgt_is_causal: bool = False, memory_is_causal: bool = False) -> Tensor:  # PATCH(RSICC)
+         """
+         Forward pass of transformer decoder layer.
+         

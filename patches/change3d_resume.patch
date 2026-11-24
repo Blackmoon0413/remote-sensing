@@ -1,0 +1,20 @@
+--- a/train_CC.py
++++ b/train_CC.py
+@@ -477,6 +477,17 @@
+         pin_memory=True
+     )
+ 
++    # PATCH(RSICC): resume from a per-epoch checkpoint
++    if args.checkpoint:
++        ck = torch.load(args.checkpoint, map_location='cpu', weights_only=False)
++        trainer.encoder.load_state_dict(ck['encoder_image'])
++        trainer.decoder.load_state_dict(ck['decoder'])
++        if encoder_optimizer is not None:
++            encoder_optimizer.load_state_dict(ck['encoder_image_optimizer'].state_dict())
++        decoder_optimizer.load_state_dict(ck['decoder_optimizer'].state_dict())
++        start_epoch = ck['epoch'] + 1
++        print(f"[resume] from epoch {ck['epoch']} (val BLEU-4 {ck['bleu-4']:.4f})", flush=True)
++        del ck
+     # Training loop
+     for epoch in range(start_epoch, args.epochs):
+         print(f'Current Epoch: {epoch}')

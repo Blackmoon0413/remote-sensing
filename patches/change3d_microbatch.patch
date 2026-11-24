@@ -1,0 +1,63 @@
+--- a/train_CC.py
++++ b/train_CC.py
+@@ -110,32 +110,28 @@
+         caps = caps.cuda()
+         caplens = caplens.cuda()
+ 
+-        # Split image pairs and encode
+-        imgs_A = img_pairs[:, 0, :, :, :]
+-        imgs_B = img_pairs[:, 1, :, :, :]
+-        
+-        # Get fused features from encoder
+-        percep_feat = encoder(imgs_A, imgs_B, output_final=True)
+-        percep_feat = rearrange(percep_feat, 'b c h w -> (h w) b c')
+-
+-        # Decode captions
+-        scores, caps_sorted, decode_lengths, sort_ind = decoder(percep_feat, caps, caplens)
+-
+-        # Set targets (all words after <start>, up to <end>)
+-        targets = caps_sorted[:, 1:]
+-
+-        # Remove timesteps that weren't decoded or are pads
+-        scores = pack_padded_sequence(scores, decode_lengths, batch_first=True).data
+-        targets = pack_padded_sequence(targets, decode_lengths, batch_first=True).data
+-
+-        # Calculate loss
+-        loss = criterion(scores, targets)
+-
+-        # Backpropagation
++        # PATCH(RSICC): gradient accumulation over micro-batches (token-weighted, exact full-batch mean)
+         decoder_optimizer.zero_grad()
+         if encoder_optimizer is not None:
+             encoder_optimizer.zero_grad()
+-        loss.backward()
++        micro = args.micro_batch if args.micro_batch > 0 else img_pairs.size(0)
++        n_tok = float((caplens.view(-1) - 1).sum())
++        loss_sum = 0.0
++        decode_lengths_all = []
++        for s in range(0, img_pairs.size(0), micro):
++            ip, cp, cl = img_pairs[s:s + micro], caps[s:s + micro], caplens[s:s + micro]
++            percep_feat = encoder(ip[:, 0], ip[:, 1], output_final=True)
++            percep_feat = rearrange(percep_feat, 'b c h w -> (h w) b c')
++            scores, caps_sorted, decode_lengths, sort_ind = decoder(percep_feat, cp, cl)
++            targets = caps_sorted[:, 1:]
++            scores = pack_padded_sequence(scores, decode_lengths, batch_first=True).data
++            targets = pack_padded_sequence(targets, decode_lengths, batch_first=True).data
++            loss = criterion(scores, targets) * (targets.numel() / n_tok)
++            loss.backward()
++            loss_sum += float(loss)
++            decode_lengths_all += decode_lengths
++        loss = torch.tensor(loss_sum)
++        decode_lengths = decode_lengths_all
+ 
+         # Clip gradients if needed
+         if args.grad_clip is not None:
+@@ -609,6 +605,8 @@
+         default=32,
+         help='Batch size'
+     )
++    parser.add_argument('--micro_batch', type=int, default=0,
++                        help='PATCH(RSICC): micro-batch size for gradient accumulation (0 = off)')
+     parser.add_argument(
+         '--print_freq', 
+         type=int, 

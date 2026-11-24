@@ -1,0 +1,140 @@
+{
+ "captioner": "qwen3vl",
+ "dataset": "dubai_cc",
+ "encoder": "dinov2_b",
+ "evidence": "lr",
+ "no_change_sentence": "no change is visible between the two images",
+ "precision_target": 0.9,
+ "correction": {
+  "threshold_from_val": null,
+  "test_acts": 0,
+  "test_acts_correct": 0,
+  "scores": {
+   "B1": 28.08,
+   "B2": 11.55,
+   "B3": 0.0,
+   "B4": 0.0,
+   "METEOR": 9.22,
+   "ROUGE_L": 21.56,
+   "CIDEr": 5.28
+  },
+  "binary": {
+   "TP": 6,
+   "FP": 1,
+   "TN": 52,
+   "FN": 91,
+   "acc": 38.67,
+   "prec": 85.71,
+   "rec": 6.19,
+   "f1": 11.54,
+   "halluc_rate": 1.89
+  },
+  "significance": null,
+  "val": null
+ },
+ "correction_cider_opt": {
+  "threshold_from_val": null,
+  "test_acts": 0,
+  "test_acts_correct": 0,
+  "scores": {
+   "B1": 28.08,
+   "B2": 11.55,
+   "B3": 0.0,
+   "B4": 0.0,
+   "METEOR": 9.22,
+   "ROUGE_L": 21.56,
+   "CIDEr": 5.28
+  },
+  "binary": {
+   "TP": 6,
+   "FP": 1,
+   "TN": 52,
+   "FN": 91,
+   "acc": 38.67,
+   "prec": 85.71,
+   "rec": 6.19,
+   "f1": 11.54,
+   "halluc_rate": 1.89
+  },
+  "significance": null,
+  "val": {
+   "cider_base": 5.2,
+   "cider_best": 5.2
+  }
+ },
+ "test_scores": {
+  "base": {
+   "B1": 28.08,
+   "B2": 11.55,
+   "B3": 0.0,
+   "B4": 0.0,
+   "METEOR": 9.22,
+   "ROUGE_L": 21.56,
+   "CIDEr": 5.28
+  },
+  "audited": {
+   "B1": 28.08,
+   "B2": 11.55,
+   "B3": 0.0,
+   "B4": 0.0,
+   "METEOR": 9.22,
+   "ROUGE_L": 21.56,
+   "CIDEr": 5.28
+  },
+  "perfect_c2n": {
+   "B1": 28.44,
+   "B2": 11.62,
+   "B3": 0.0,
+   "B4": 0.0,
+   "METEOR": 9.27,
+   "ROUGE_L": 21.6,
+   "CIDEr": 5.3
+  }
+ },
+ "binary": {
+  "base": {
+   "TP": 6,
+   "FP": 1,
+   "TN": 52,
+   "FN": 91,
+   "acc": 38.67,
+   "prec": 85.71,
+   "rec": 6.19,
+   "f1": 11.54,
+   "halluc_rate": 1.89
+  },
+  "audited": {
+   "TP": 6,
+   "FP": 1,
+   "TN": 52,
+   "FN": 91,
+   "acc": 38.67,
+   "prec": 85.71,
+   "rec": 6.19,
+   "f1": 11.54,
+   "halluc_rate": 1.89
+  }
+ },
+ "flags": {
+  "5%": {
+   "threshold_from_val": 1.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 5,
+   "missed_found": 5,
+   "missed_total": 91,
+   "recall": 5.5,
+   "precision": 100.0,
+   "random_precision": 63.6
+  },
+  "10%": {
+   "threshold_from_val": 1.0,
+   "tie_flag_prob": 1.0,
+   "n_flagged": 14,
+   "missed_found": 14,
+   "missed_total": 91,
+   "recall": 15.4,
+   "precision": 100.0,
+   "random_precision": 63.6
+  }
+ }
+}

@@ -1,0 +1,25 @@
+# Main environment (Python 3.11.4), versions used for the paper
+torch==2.11.0        # CUDA 12.8 build (+cu128)
+torchvision==0.26.0
+numpy==1.26.4
+scipy==1.16.3
+scikit-learn==1.9.0
+h5py==3.16.0
+pillow==10.2.0
+matplotlib==3.10.7
+transformers==4.39.3  # RSCaMa / PromptCC / DINOv2; PromptCC's pickled GPT-2 needs s3_infer_promptcc.upgrade_legacy_gpt2
+timm==1.0.31
+einops==0.8.2
+fvcore==0.1.5.post20221221
+pytorchvideo==0.1.5
+imageio==2.38.2
+tqdm==4.70.0
+open_clip_torch==4.2.2   # RemoteCLIP
+scikit-image==0.26.0
+loguru==0.8.0
+clip @ git+https://github.com/openai/CLIP.git@d05afc436d78f1c48dc0dbf8e5980a9d471f35f6
+# Java (tested with 11) is needed for METEOR 1.5
+
+# Separate environment for the zero-shot VLM step (s11_vlm_caption.py)
+# transformers==5.15.1
+# accelerate==1.14.0

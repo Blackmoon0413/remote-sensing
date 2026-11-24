@@ -1,0 +1,217 @@
+{
+ "captioner": "qwen3vl",
+ "dataset": "levir_cc",
+ "encoder": "pixdiff",
+ "evidence": "knn51",
+ "no_change_sentence": "no change is visible between the two images",
+ "precision_target": 0.9,
+ "correction": {
+  "threshold_from_val": 0.1176,
+  "test_acts": 64,
+  "test_acts_correct": 60,
+  "scores": {
+   "B1": 25.16,
+   "B2": 12.8,
+   "B3": 5.76,
+   "B4": 2.98,
+   "METEOR": 14.51,
+   "ROUGE_L": 23.56,
+   "CIDEr": 3.15
+  },
+  "binary": {
+   "TP": 887,
+   "FP": 692,
+   "TN": 273,
+   "FN": 77,
+   "acc": 60.13,
+   "prec": 56.17,
+   "rec": 92.01,
+   "f1": 69.76,
+   "halluc_rate": 71.71
+  },
+  "significance": {
+   "B4": {
+    "delta": -0.005,
+    "ci95": [
+     -0.016,
+     0.0
+    ],
+    "perm_p": 0.5027,
+    "n_changed": 64
+   },
+   "METEOR": {
+    "delta": 0.445,
+    "ci95": [
+     0.33,
+     0.571
+    ],
+    "perm_p": 0.0,
+    "n_changed": 64
+   },
+   "ROUGE_L": {
+    "delta": 0.593,
+    "ci95": [
+     0.441,
+     0.749
+    ],
+    "perm_p": 0.0,
+    "n_changed": 64
+   },
+   "CIDEr": {
+    "delta": 0.22,
+    "ci95": [
+     0.172,
+     0.28
+    ],
+    "perm_p": 0.0,
+    "n_changed": 64
+   }
+  },
+  "val": {
+   "val_acts": 37,
+   "val_precision": 91.9
+  }
+ },
+ "correction_cider_opt": {
+  "threshold_from_val": 0.5686,
+  "test_acts": 995,
+  "test_acts_correct": 646,
+  "scores": {
+   "B1": 36.44,
+   "B2": 20.65,
+   "B3": 7.56,
+   "B4": 3.53,
+   "METEOR": 15.31,
+   "ROUGE_L": 27.48,
+   "CIDEr": 4.58
+  },
+  "binary": {
+   "TP": 542,
+   "FP": 106,
+   "TN": 859,
+   "FN": 422,
+   "acc": 72.63,
+   "prec": 83.64,
+   "rec": 56.22,
+   "f1": 67.25,
+   "halluc_rate": 10.98
+  },
+  "significance": {
+   "B4": {
+    "delta": -0.424,
+    "ci95": [
+     -0.573,
+     -0.284
+    ],
+    "perm_p": 0.0,
+    "n_changed": 995
+   },
+   "METEOR": {
+    "delta": 3.2,
+    "ci95": [
+     2.778,
+     3.632
+    ],
+    "perm_p": 0.0,
+    "n_changed": 995
+   },
+   "ROUGE_L": {
+    "delta": 4.506,
+    "ci95": [
+     3.959,
+     5.098
+    ],
+    "perm_p": 0.0,
+    "n_changed": 995
+   },
+   "CIDEr": {
+    "delta": 1.654,
+    "ci95": [
+     1.3,
+     1.972
+    ],
+    "perm_p": 0.0,
+    "n_changed": 995
+   }
+  },
+  "val": {
+   "cider_base": 3.47,
+   "cider_best": 4.99
+  }
+ },
+ "test_scores": {
+  "base": {
+   "B1": 24.31,
+   "B2": 12.15,
+   "B3": 5.53,
+   "B4": 2.88,
+   "METEOR": 14.28,
+   "ROUGE_L": 22.97,
+   "CIDEr": 2.93
+  },
+  "audited": {
+   "B1": 25.16,
+   "B2": 12.8,
+   "B3": 5.76,
+   "B4": 2.98,
+   "METEOR": 14.51,
+   "ROUGE_L": 23.56,
+   "CIDEr": 3.15
+  },
+  "perfect_c2n": {
+   "B1": 38.8,
+   "B2": 23.22,
+   "B3": 9.62,
+   "B4": 4.81,
+   "METEOR": 17.74,
+   "ROUGE_L": 30.65,
+   "CIDEr": 5.71
+  }
+ },
+ "binary": {
+  "base": {
+   "TP": 891,
+   "FP": 752,
+   "TN": 213,
+   "FN": 73,
+   "acc": 57.23,
+   "prec": 54.23,
+   "rec": 92.43,
+   "f1": 68.35,
+   "halluc_rate": 77.93
+  },
+  "audited": {
+   "TP": 887,
+   "FP": 692,
+   "TN": 273,
+   "FN": 77,
+   "acc": 60.13,
+   "prec": 56.17,
+   "rec": 92.01,
+   "f1": 69.76,
+   "halluc_rate": 71.71
+  }
+ },
+ "flags": {
+  "5%": {
+   "threshold_from_val": 0.4118,
+   "tie_flag_prob": 0.2,
+   "n_flagged": 95,
+   "missed_found": 63,
+   "missed_total": 73,
+   "recall": 86.3,
+   "precision": 66.3,
+   "random_precision": 25.5
+  },
+  "10%": {
+   "threshold_from_val": 0.1569,
+   "tie_flag_prob": 0.1,
+   "n_flagged": 193,
+   "missed_found": 71,
+   "missed_total": 73,
+   "recall": 97.3,
+   "precision": 36.8,
+   "random_precision": 25.5
+  }
+ }
+}

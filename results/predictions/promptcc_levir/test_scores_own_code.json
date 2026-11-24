@@ -1,0 +1,12 @@
+{
+  "n": 1929,
+  "seconds": 341.2,
+  "changeflag_acc": 91.6,
+  "Bleu_1": 84.04,
+  "Bleu_2": 76.22,
+  "Bleu_3": 69.4,
+  "Bleu_4": 63.52,
+  "METEOR": 38.6,
+  "ROUGE_L": 73.74,
+  "CIDEr": 135.56
+}

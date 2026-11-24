@@ -1,0 +1,18 @@
+--- a/model.py
++++ b/model.py
+@@ -231,13 +231,14 @@
+         x = x.permute(1, 0, 2)  # NLD -> LND
+         x = self.transformer(x)
+         x = x.permute(1, 0, 2)  # LND -> NLD
++        featuremap = x[:, 1:, :]  # PATCH(RSICC): patch tokens, see PromptCC issue #3
+ 
+         x = self.ln_post(x[:, 0, :])
+ 
+         if self.proj is not None:
+             x = x @ self.proj
+ 
+-        return x
++        return x, featuremap
+ 
+ 
+ class CLIP(nn.Module):

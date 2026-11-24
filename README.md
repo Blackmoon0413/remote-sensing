@@ -1,0 +1,85 @@
+# Auditing change-state errors in remote sensing image change captioning
+
+Code, per-sample results and audit decisions for the paper
+*"Auditing Change-State Errors in Remote Sensing Image Change Captioning with Frozen Foundation-Model Evidence"*
+by Hongyi Chu, Fanqi Chu, Han Shu, Le-Minh Nguyen and Hao Hao (submitted to *Remote Sensing*, MDPI).
+<!-- TODO: add DOI and citation after acceptance -->
+
+A change caption implicitly claims that *something changed* or that *nothing changed*. This repository measures
+how often four captioners get that claim wrong on LEVIR-CC and Dubai-CC, and implements a captioner-agnostic audit:
+
+* **A. Correct**: a change claim with evidence `p(change) <= t_c` is replaced by the captioner's own no-change sentence;
+  `t_c` is the largest validation threshold whose corrections are at least 90% correct (otherwise the audit abstains).
+* **B. Flag**: a no-change claim with `p(change) >= t_f` is sent to human review; `t_f` fills a 5% / 10% review budget on validation.
+
+The evidence `p(change)` comes from frozen DINOv2 / RemoteCLIP features and a linear probe (or kNN) fitted on labelled training pairs;
+it never sees the captioner.
+
+## What is included
+
+| Path | Content |
+|---|---|
+| `scripts/` | the full pipeline (`s0`–`s17`, see below) and shared utilities (`common.py`: caption parser, unified scorer) |
+| `patches/` | diffs applied to the third-party code so that it runs on current PyTorch / Windows |
+| `results/labels/` | per-pair change labels used for evaluation (LEVIR-CC official flag; Dubai-CC majority vote of the 5 references); reference captions are not redistributed, download the datasets |
+| `results/predictions/<captioner>_<dataset>/` | per-sample captions of every captioner (`val.json`, `test.json`), own-code test scores, selected Change3D epoch |
+| `results/audit/` | one JSON per (captioner, dataset, features, evidence model): thresholds, corrections, flags, scores, significance |
+| `results/main_results.json`, `summary.md` | main configuration (selected by validation AUC) and the overview table |
+| `results/figs/` | figures of the paper |
+
+Two large files are attached to the [releases](https://github.com/Blackmoon0413/remote-sensing/releases) of this repository:
+`features.zip` (frozen-encoder evidence features, ~350 MB) and `change3d_checkpoints.zip`
+(our retrained Change3D checkpoints for LEVIR-CC and Dubai-CC, selected by validation BLEU-4, ~175 MB).
+
+## Data and weights (not redistributed; download from the original sources)
+
+| Item | Source |
+|---|---|
+| LEVIR-CC | Hugging Face `datasets/lcybuaa/LEVIR-CC` |
+| Dubai-CC | https://disi.unitn.it/~melgani/DubaiCC.rar |
+| RSCaMa LEVIR-CC weights | Hugging Face `lcybuaa/RSCaMa` |
+| PromptCC LEVIR-CC weights | Hugging Face `lcybuaa/PromptCC` |
+| X3D-L (Change3D backbone) | https://dl.fbaipublicfiles.com/pytorchvideo/model_zoo/kinetics/X3D_L.pyth |
+| RemoteCLIP ViT-B/32, ViT-L/14 | Hugging Face `chendelong/RemoteCLIP` |
+| DINOv2-B | Hugging Face `facebook/dinov2-base` |
+| Qwen3-VL-4B-Instruct | Hugging Face `Qwen/Qwen3-VL-4B-Instruct` |
+
+`scripts/s0_download.sh` downloads most of them; `scripts/s0_verify.py` checks size and SHA-256 against Hugging Face.
+
+Third-party code (cloned into `third_party/`, then patched by `scripts/s1_patch_third_party.py`):
+RSCaMa `github.com/Chen-Yang-Liu/RSCaMa` (aa68e4c), PromptCC `github.com/Chen-Yang-Liu/PromptCC` (082d055),
+RSICCformer utilities `github.com/Chen-Yang-Liu/RSICC` (d1505e5), Change3D `github.com/zhuduowang/Change3D` (2f51dea).
+
+## Environment
+
+Python 3.11, PyTorch 2.11 (CUDA 12.8); see `requirements.txt`. The VLM step (`s11`) uses a separate environment with
+`transformers` 5.x (`PYS` in the shell scripts). Tested on Windows 10 with an RTX 5080 (16 GB) and an RTX 5070 (12 GB).
+
+Notes:
+* METEOR 1.5 (Java) fails on non-ASCII paths: run from an ASCII directory.
+* RSCaMa's fused Mamba kernels are Linux-only; the patch falls back to the pure-PyTorch reference kernels in `scripts/mamba_ref_ops.py`.
+* The RSCaMa checkpoint needs the 468-token vocabulary rebuilt by its `preprocess_data.py`, not the shipped 501-token file.
+
+## Pipeline
+
+| Step | Script | Purpose |
+|---|---|---|
+| 0 | `s0_download.sh`, `s0_verify.py` | download and verify data and weights |
+| 1 | `s1_patch_third_party.py` | apply patches (idempotent) |
+| 2–3 | `s2_infer_rscama.py`, `s3_infer_promptcc.py` | captions + features of the released captioners |
+| 4–5 | `s4_reproduction_report.py`, `s5_feasibility_redecode.py` | reproduction check; constrained re-decoding experiment |
+| 6 | `s6_make_hdf5.py` | HDF5 data for Change3D, reference/label files |
+| 7–8 | `s7_retrieval_features.py`, `s8_knn_change_state.py` | frozen-encoder evidence features |
+| 9 | `s9_audit.py` (`s9b_rerun.py`) | the audit for every captioner / features / evidence model |
+| 10 | `s10_infer_change3d.py` (+ `s13_best_epoch.py`, `queue_change3d.sh`) | Change3D training-epoch selection and inference |
+| 11 | `s11_vlm_caption.py` | zero-shot Qwen3-VL captions (`--variant neutral`: main results; `--variant orig`: prompt sensitivity, Section 5.9) |
+| 19–22 | `s19_sanity.py`, `s20_prompt_test.py`, `s21_patch_maps.py`, `s22_extra_figs.py` | sanity checks of the reported gains, prompt comparison, patch-change maps, additional figures |
+| 12, 14–16 | `s12_summary.py`, `s14_main_results.py`, `s15_pixdiff_features.py`, `s16_tables.py` | summary, main configuration, figures, LaTeX tables |
+| 17 | `s17_build_submission.py` | builds the submission package |
+| 18 | `s18_cases.py` | case-study figure: one pair per audit outcome, chosen by a fixed rule (p closest to the outcome median) |
+
+All thresholds and the evidence configuration are selected on the validation split; the test split is used once.
+
+## License
+
+To be added. The diffs in `patches/` modify third-party code, which keeps the license of its original repository.

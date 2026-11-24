@@ -1,0 +1,2008 @@
+{
+"train": [
+{
+"name": "1x4",
+"changeflag": 0
+},
+{
+"name": "5x31",
+"changeflag": 0
+},
+{
+"name": "6x26",
+"changeflag": 1
+},
+{
+"name": "6x30",
+"changeflag": 0
+},
+{
+"name": "6x31",
+"changeflag": 0
+},
+{
+"name": "6x32",
+"changeflag": 0
+},
+{
+"name": "6x33",
+"changeflag": 0
+},
+{
+"name": "6x39",
+"changeflag": 1
+},
+{
+"name": "7x25",
+"changeflag": 1
+},
+{
+"name": "7x28",
+"changeflag": 1
+},
+{
+"name": "7x30",
+"changeflag": 0
+},
+{
+"name": "7x32",
+"changeflag": 0
+},
+{
+"name": "7x36",
+"changeflag": 1
+},
+{
+"name": "7x38",
+"changeflag": 1
+},
+{
+"name": "7x39",
+"changeflag": 1
+},
+{
+"name": "7x40",
+"changeflag": 0
+},
+{
+"name": "7x43",
+"changeflag": 0
+},
+{
+"name": "8x29",
+"changeflag": 1
+},
+{
+"name": "8x30",
+"changeflag": 1
+},
+{
+"name": "8x31",
+"changeflag": 1
+},
+{
+"name": "8x32",
+"changeflag": 0
+},
+{
+"name": "8x33",
+"changeflag": 1
+},
+{
+"name": "8x36",
+"changeflag": 1
+},
+{
+"name": "8x38",
+"changeflag": 0
+},
+{
+"name": "8x39",
+"changeflag": 1
+},
+{
+"name": "8x40",
+"changeflag": 1
+},
+{
+"name": "8x41",
+"changeflag": 0
+},
+{
+"name": "8x42",
+"changeflag": 1
+},
+{
+"name": "8x43",
+"changeflag": 0
+},
+{
+"name": "8x45",
+"changeflag": 1
+},
+{
+"name": "8x47",
+"changeflag": 1
+},
+{
+"name": "9x9",
+"changeflag": 0
+},
+{
+"name": "9x25",
+"changeflag": 1
+},
+{
+"name": "9x31",
+"changeflag": 1
+},
+{
+"name": "9x36",
+"changeflag": 1
+},
+{
+"name": "9x38",
+"changeflag": 1
+},
+{
+"name": "9x40",
+"changeflag": 1
+},
+{
+"name": "9x41",
+"changeflag": 1
+},
+{
+"name": "10x28",
+"changeflag": 1
+},
+{
+"name": "10x31",
+"changeflag": 1
+},
+{
+"name": "10x36",
+"changeflag": 1
+},
+{
+"name": "10x37",
+"changeflag": 1
+},
+{
+"name": "10x38",
+"changeflag": 1
+},
+{
+"name": "10x41",
+"changeflag": 1
+},
+{
+"name": "10x43",
+"changeflag": 1
+},
+{
+"name": "10x45",
+"changeflag": 1
+},
+{
+"name": "10x48",
+"changeflag": 1
+},
+{
+"name": "10x49",
+"changeflag": 1
+},
+{
+"name": "10x50",
+"changeflag": 0
+},
+{
+"name": "11x26",
+"changeflag": 1
+},
+{
+"name": "11x27",
+"changeflag": 0
+},
+{
+"name": "11x32",
+"changeflag": 0
+},
+{
+"name": "11x36",
+"changeflag": 1
+},
+{
+"name": "11x37",
+"changeflag": 1
+},
+{
+"name": "11x39",
+"changeflag": 1
+},
+{
+"name": "11x42",
+"changeflag": 1
+},
+{
+"name": "11x46",
+"changeflag": 0
+},
+{
+"name": "11x48",
+"changeflag": 0
+},
+{
+"name": "11x50",
+"changeflag": 0
+},
+{
+"name": "12x0",
+"changeflag": 0
+},
+{
+"name": "12x23",
+"changeflag": 1
+},
+{
+"name": "12x24",
+"changeflag": 1
+},
+{
+"name": "12x26",
+"changeflag": 0
+},
+{
+"name": "12x28",
+"changeflag": 0
+},
+{
+"name": "12x31",
+"changeflag": 1
+},
+{
+"name": "12x33",
+"changeflag": 1
+},
+{
+"name": "12x37",
+"changeflag": 1
+},
+{
+"name": "12x39",
+"changeflag": 1
+},
+{
+"name": "12x40",
+"changeflag": 1
+},
+{
+"name": "12x41",
+"changeflag": 1
+},
+{
+"name": "12x42",
+"changeflag": 0
+},
+{
+"name": "12x45",
+"changeflag": 0
+},
+{
+"name": "12x48",
+"changeflag": 0
+},
+{
+"name": "13x5",
+"changeflag": 0
+},
+{
+"name": "13x17",
+"changeflag": 1
+},
+{
+"name": "13x19",
+"changeflag": 1
+},
+{
+"name": "13x27",
+"changeflag": 0
+},
+{
+"name": "13x28",
+"changeflag": 1
+},
+{
+"name": "13x30",
+"changeflag": 1
+},
+{
+"name": "13x32",
+"changeflag": 1
+},
+{
+"name": "13x33",
+"changeflag": 0
+},
+{
+"name": "13x34",
+"changeflag": 1
+},
+{
+"name": "13x36",
+"changeflag": 1
+},
+{
+"name": "13x42",
+"changeflag": 1
+},
+{
+"name": "13x45",
+"changeflag": 0
+},
+{
+"name": "13x48",
+"changeflag": 0
+},
+{
+"name": "13x50",
+"changeflag": 1
+},
+{
+"name": "14x15",
+"changeflag": 1
+},
+{
+"name": "14x19",
+"changeflag": 1
+},
+{
+"name": "14x23",
+"changeflag": 0
+},
+{
+"name": "14x26",
+"changeflag": 1
+},
+{
+"name": "14x27",
+"changeflag": 0
+},
+{
+"name": "14x29",
+"changeflag": 1
+},
+{
+"name": "14x32",
+"changeflag": 1
+},
+{
+"name": "14x33",
+"changeflag": 1
+},
+{
+"name": "14x35",
+"changeflag": 1
+},
+{
+"name": "14x37",
+"changeflag": 1
+},
+{
+"name": "14x39",
+"changeflag": 1
+},
+{
+"name": "14x41",
+"changeflag": 0
+},
+{
+"name": "14x44",
+"changeflag": 1
+},
+{
+"name": "14x45",
+"changeflag": 0
+},
+{
+"name": "14x47",
+"changeflag": 0
+},
+{
+"name": "14x50",
+"changeflag": 1
+},
+{
+"name": "15x4",
+"changeflag": 0
+},
+{
+"name": "15x15",
+"changeflag": 1
+},
+{
+"name": "15x18",
+"changeflag": 1
+},
+{
+"name": "15x24",
+"changeflag": 0
+},
+{
+"name": "15x26",
+"changeflag": 1
+},
+{
+"name": "15x28",
+"changeflag": 1
+},
+{
+"name": "15x30",
+"changeflag": 1
+},
+{
+"name": "15x32",
+"changeflag": 0
+},
+{
+"name": "15x33",
+"changeflag": 1
+},
+{
+"name": "15x34",
+"changeflag": 1
+},
+{
+"name": "15x36",
+"changeflag": 0
+},
+{
+"name": "15x37",
+"changeflag": 1
+},
+{
+"name": "15x39",
+"changeflag": 0
+},
+{
+"name": "15x43",
+"changeflag": 1
+},
+{
+"name": "15x46",
+"changeflag": 1
+},
+{
+"name": "15x49",
+"changeflag": 1
+},
+{
+"name": "16x25",
+"changeflag": 0
+},
+{
+"name": "16x28",
+"changeflag": 1
+},
+{
+"name": "16x29",
+"changeflag": 1
+},
+{
+"name": "16x30",
+"changeflag": 1
+},
+{
+"name": "16x31",
+"changeflag": 1
+},
+{
+"name": "16x32",
+"changeflag": 1
+},
+{
+"name": "16x39",
+"changeflag": 0
+},
+{
+"name": "16x43",
+"changeflag": 0
+},
+{
+"name": "16x45",
+"changeflag": 0
+},
+{
+"name": "16x48",
+"changeflag": 1
+},
+{
+"name": "17x18",
+"changeflag": 1
+},
+{
+"name": "17x22",
+"changeflag": 0
+},
+{
+"name": "17x24",
+"changeflag": 1
+},
+{
+"name": "17x25",
+"changeflag": 1
+},
+{
+"name": "17x26",
+"changeflag": 1
+},
+{
+"name": "17x28",
+"changeflag": 0
+},
+{
+"name": "17x29",
+"changeflag": 1
+},
+{
+"name": "17x30",
+"changeflag": 1
+},
+{
+"name": "17x32",
+"changeflag": 1
+},
+{
+"name": "17x38",
+"changeflag": 0
+},
+{
+"name": "17x40",
+"changeflag": 0
+},
+{
+"name": "17x42",
+"changeflag": 1
+},
+{
+"name": "18x20",
+"changeflag": 1
+},
+{
+"name": "18x21",
+"changeflag": 1
+},
+{
+"name": "18x25",
+"changeflag": 1
+},
+{
+"name": "18x27",
+"changeflag": 1
+},
+{
+"name": "18x31",
+"changeflag": 1
+},
+{
+"name": "18x32",
+"changeflag": 1
+},
+{
+"name": "18x43",
+"changeflag": 0
+},
+{
+"name": "18x44",
+"changeflag": 0
+},
+{
+"name": "18x50",
+"changeflag": 0
+},
+{
+"name": "19x20",
+"changeflag": 0
+},
+{
+"name": "19x23",
+"changeflag": 1
+},
+{
+"name": "19x24",
+"changeflag": 1
+},
+{
+"name": "19x26",
+"changeflag": 1
+},
+{
+"name": "19x29",
+"changeflag": 0
+},
+{
+"name": "19x31",
+"changeflag": 1
+},
+{
+"name": "19x35",
+"changeflag": 0
+},
+{
+"name": "19x39",
+"changeflag": 1
+},
+{
+"name": "19x42",
+"changeflag": 0
+},
+{
+"name": "19x49",
+"changeflag": 1
+},
+{
+"name": "20x4",
+"changeflag": 0
+},
+{
+"name": "20x19",
+"changeflag": 1
+},
+{
+"name": "20x20",
+"changeflag": 0
+},
+{
+"name": "20x22",
+"changeflag": 0
+},
+{
+"name": "20x23",
+"changeflag": 1
+},
+{
+"name": "20x25",
+"changeflag": 1
+},
+{
+"name": "20x26",
+"changeflag": 1
+},
+{
+"name": "20x31",
+"changeflag": 1
+},
+{
+"name": "20x32",
+"changeflag": 1
+},
+{
+"name": "20x43",
+"changeflag": 0
+},
+{
+"name": "20x50",
+"changeflag": 0
+},
+{
+"name": "21x14",
+"changeflag": 1
+},
+{
+"name": "21x15",
+"changeflag": 1
+},
+{
+"name": "21x16",
+"changeflag": 1
+},
+{
+"name": "21x20",
+"changeflag": 1
+},
+{
+"name": "21x22",
+"changeflag": 1
+},
+{
+"name": "21x24",
+"changeflag": 0
+},
+{
+"name": "21x26",
+"changeflag": 1
+},
+{
+"name": "21x27",
+"changeflag": 0
+},
+{
+"name": "21x28",
+"changeflag": 0
+},
+{
+"name": "21x36",
+"changeflag": 1
+},
+{
+"name": "21x39",
+"changeflag": 0
+},
+{
+"name": "21x49",
+"changeflag": 1
+},
+{
+"name": "22x14",
+"changeflag": 1
+},
+{
+"name": "22x19",
+"changeflag": 1
+},
+{
+"name": "22x21",
+"changeflag": 1
+},
+{
+"name": "22x25",
+"changeflag": 1
+},
+{
+"name": "22x31",
+"changeflag": 1
+},
+{
+"name": "22x47",
+"changeflag": 0
+},
+{
+"name": "22x49",
+"changeflag": 1
+},
+{
+"name": "23x13",
+"changeflag": 1
+},
+{
+"name": "23x19",
+"changeflag": 1
+},
+{
+"name": "23x22",
+"changeflag": 1
+},
+{
+"name": "23x27",
+"changeflag": 1
+},
+{
+"name": "23x29",
+"changeflag": 0
+},
+{
+"name": "23x31",
+"changeflag": 1
+},
+{
+"name": "23x44",
+"changeflag": 0
+},
+{
+"name": "23x46",
+"changeflag": 0
+},
+{
+"name": "23x50",
+"changeflag": 1
+},
+{
+"name": "24x14",
+"changeflag": 1
+},
+{
+"name": "24x16",
+"changeflag": 1
+},
+{
+"name": "24x17",
+"changeflag": 1
+},
+{
+"name": "24x21",
+"changeflag": 1
+},
+{
+"name": "24x22",
+"changeflag": 1
+},
+{
+"name": "24x28",
+"changeflag": 1
+},
+{
+"name": "24x29",
+"changeflag": 1
+},
+{
+"name": "25x15",
+"changeflag": 1
+},
+{
+"name": "25x17",
+"changeflag": 1
+},
+{
+"name": "25x32",
+"changeflag": 1
+},
+{
+"name": "26x14",
+"changeflag": 1
+},
+{
+"name": "26x15",
+"changeflag": 1
+},
+{
+"name": "26x18",
+"changeflag": 1
+},
+{
+"name": "26x31",
+"changeflag": 1
+},
+{
+"name": "27x14",
+"changeflag": 1
+},
+{
+"name": "27x16",
+"changeflag": 1
+},
+{
+"name": "27x19",
+"changeflag": 1
+},
+{
+"name": "27x21",
+"changeflag": 1
+},
+{
+"name": "27x23",
+"changeflag": 1
+},
+{
+"name": "27x44",
+"changeflag": 0
+},
+{
+"name": "28x13",
+"changeflag": 1
+},
+{
+"name": "28x16",
+"changeflag": 1
+},
+{
+"name": "28x21",
+"changeflag": 1
+},
+{
+"name": "28x22",
+"changeflag": 1
+},
+{
+"name": "28x23",
+"changeflag": 1
+},
+{
+"name": "28x25",
+"changeflag": 1
+},
+{
+"name": "28x34",
+"changeflag": 1
+},
+{
+"name": "28x50",
+"changeflag": 1
+},
+{
+"name": "29x5",
+"changeflag": 1
+},
+{
+"name": "29x9",
+"changeflag": 1
+},
+{
+"name": "29x12",
+"changeflag": 0
+},
+{
+"name": "29x17",
+"changeflag": 1
+},
+{
+"name": "29x20",
+"changeflag": 1
+},
+{
+"name": "29x22",
+"changeflag": 1
+},
+{
+"name": "29x45",
+"changeflag": 1
+},
+{
+"name": "30x7",
+"changeflag": 1
+},
+{
+"name": "30x9",
+"changeflag": 1
+},
+{
+"name": "30x11",
+"changeflag": 0
+},
+{
+"name": "30x12",
+"changeflag": 0
+},
+{
+"name": "30x20",
+"changeflag": 1
+},
+{
+"name": "30x45",
+"changeflag": 1
+},
+{
+"name": "30x48",
+"changeflag": 0
+},
+{
+"name": "31x4",
+"changeflag": 1
+},
+{
+"name": "31x7",
+"changeflag": 1
+},
+{
+"name": "31x37",
+"changeflag": 0
+},
+{
+"name": "32x5",
+"changeflag": 1
+},
+{
+"name": "32x36",
+"changeflag": 0
+},
+{
+"name": "32x37",
+"changeflag": 1
+},
+{
+"name": "33x4",
+"changeflag": 1
+},
+{
+"name": "33x9",
+"changeflag": 0
+},
+{
+"name": "33x15",
+"changeflag": 1
+},
+{
+"name": "33x50",
+"changeflag": 0
+},
+{
+"name": "34x6",
+"changeflag": 1
+},
+{
+"name": "34x12",
+"changeflag": 1
+},
+{
+"name": "34x19",
+"changeflag": 1
+},
+{
+"name": "34x21",
+"changeflag": 1
+},
+{
+"name": "34x37",
+"changeflag": 1
+},
+{
+"name": "34x40",
+"changeflag": 0
+},
+{
+"name": "34x47",
+"changeflag": 0
+},
+{
+"name": "35x2",
+"changeflag": 0
+},
+{
+"name": "36x2",
+"changeflag": 1
+},
+{
+"name": "36x3",
+"changeflag": 0
+},
+{
+"name": "36x4",
+"changeflag": 1
+},
+{
+"name": "36x37",
+"changeflag": 0
+},
+{
+"name": "36x39",
+"changeflag": 1
+},
+{
+"name": "37x3",
+"changeflag": 0
+},
+{
+"name": "37x4",
+"changeflag": 0
+},
+{
+"name": "37x10",
+"changeflag": 1
+},
+{
+"name": "37x21",
+"changeflag": 1
+},
+{
+"name": "38x15",
+"changeflag": 1
+},
+{
+"name": "38x21",
+"changeflag": 1
+},
+{
+"name": "38x22",
+"changeflag": 1
+},
+{
+"name": "39x19",
+"changeflag": 1
+},
+{
+"name": "40x16",
+"changeflag": 1
+},
+{
+"name": "40x17",
+"changeflag": 1
+},
+{
+"name": "40x44",
+"changeflag": 0
+},
+{
+"name": "40x45",
+"changeflag": 0
+},
+{
+"name": "41x33",
+"changeflag": 1
+},
+{
+"name": "41x40",
+"changeflag": 0
+},
+{
+"name": "42x10",
+"changeflag": 1
+},
+{
+"name": "42x25",
+"changeflag": 0
+},
+{
+"name": "42x30",
+"changeflag": 1
+},
+{
+"name": "42x43",
+"changeflag": 1
+},
+{
+"name": "42x45",
+"changeflag": 0
+},
+{
+"name": "43x28",
+"changeflag": 0
+},
+{
+"name": "44x7",
+"changeflag": 0
+},
+{
+"name": "44x10",
+"changeflag": 1
+},
+{
+"name": "44x42",
+"changeflag": 1
+},
+{
+"name": "44x44",
+"changeflag": 1
+},
+{
+"name": "44x45",
+"changeflag": 0
+},
+{
+"name": "45x21",
+"changeflag": 1
+},
+{
+"name": "45x24",
+"changeflag": 0
+},
+{
+"name": "45x45",
+"changeflag": 0
+},
+{
+"name": "46x44",
+"changeflag": 1
+},
+{
+"name": "46x45",
+"changeflag": 0
+},
+{
+"name": "47x4",
+"changeflag": 0
+},
+{
+"name": "47x46",
+"changeflag": 1
+},
+{
+"name": "47x47",
+"changeflag": 0
+},
+{
+"name": "48x5",
+"changeflag": 0
+},
+{
+"name": "48x49",
+"changeflag": 1
+},
+{
+"name": "48x50",
+"changeflag": 0
+}
+],
+"val": [
+{
+"name": "8x34",
+"changeflag": 0
+},
+{
+"name": "8x50",
+"changeflag": 0
+},
+{
+"name": "9x46",
+"changeflag": 1
+},
+{
+"name": "10x35",
+"changeflag": 0
+},
+{
+"name": "11x24",
+"changeflag": 1
+},
+{
+"name": "11x29",
+"changeflag": 0
+},
+{
+"name": "12x4",
+"changeflag": 0
+},
+{
+"name": "12x29",
+"changeflag": 1
+},
+{
+"name": "13x26",
+"changeflag": 0
+},
+{
+"name": "13x43",
+"changeflag": 0
+},
+{
+"name": "14x17",
+"changeflag": 1
+},
+{
+"name": "14x31",
+"changeflag": 0
+},
+{
+"name": "15x22",
+"changeflag": 1
+},
+{
+"name": "15x25",
+"changeflag": 0
+},
+{
+"name": "15x48",
+"changeflag": 0
+},
+{
+"name": "16x15",
+"changeflag": 1
+},
+{
+"name": "16x24",
+"changeflag": 0
+},
+{
+"name": "16x40",
+"changeflag": 0
+},
+{
+"name": "17x21",
+"changeflag": 1
+},
+{
+"name": "17x31",
+"changeflag": 1
+},
+{
+"name": "17x34",
+"changeflag": 1
+},
+{
+"name": "17x49",
+"changeflag": 1
+},
+{
+"name": "18x28",
+"changeflag": 1
+},
+{
+"name": "19x28",
+"changeflag": 0
+},
+{
+"name": "20x48",
+"changeflag": 0
+},
+{
+"name": "21x18",
+"changeflag": 0
+},
+{
+"name": "22x13",
+"changeflag": 1
+},
+{
+"name": "22x15",
+"changeflag": 1
+},
+{
+"name": "22x20",
+"changeflag": 1
+},
+{
+"name": "22x22",
+"changeflag": 0
+},
+{
+"name": "22x27",
+"changeflag": 0
+},
+{
+"name": "22x33",
+"changeflag": 1
+},
+{
+"name": "22x41",
+"changeflag": 0
+},
+{
+"name": "23x32",
+"changeflag": 1
+},
+{
+"name": "23x35",
+"changeflag": 1
+},
+{
+"name": "23x42",
+"changeflag": 0
+},
+{
+"name": "24x25",
+"changeflag": 1
+},
+{
+"name": "24x27",
+"changeflag": 1
+},
+{
+"name": "24x31",
+"changeflag": 1
+},
+{
+"name": "26x22",
+"changeflag": 1
+},
+{
+"name": "29x16",
+"changeflag": 1
+},
+{
+"name": "30x43",
+"changeflag": 1
+},
+{
+"name": "33x22",
+"changeflag": 1
+},
+{
+"name": "33x37",
+"changeflag": 1
+},
+{
+"name": "34x10",
+"changeflag": 1
+},
+{
+"name": "36x0",
+"changeflag": 1
+},
+{
+"name": "38x16",
+"changeflag": 1
+},
+{
+"name": "39x29",
+"changeflag": 1
+},
+{
+"name": "40x18",
+"changeflag": 1
+},
+{
+"name": "43x15",
+"changeflag": 1
+}
+],
+"test": [
+{
+"name": "0x0",
+"changeflag": 0
+},
+{
+"name": "6x35",
+"changeflag": 0
+},
+{
+"name": "7x37",
+"changeflag": 1
+},
+{
+"name": "8x35",
+"changeflag": 1
+},
+{
+"name": "8x37",
+"changeflag": 0
+},
+{
+"name": "8x46",
+"changeflag": 1
+},
+{
+"name": "9x28",
+"changeflag": 1
+},
+{
+"name": "9x37",
+"changeflag": 1
+},
+{
+"name": "9x39",
+"changeflag": 1
+},
+{
+"name": "10x26",
+"changeflag": 1
+},
+{
+"name": "10x27",
+"changeflag": 1
+},
+{
+"name": "10x29",
+"changeflag": 0
+},
+{
+"name": "10x30",
+"changeflag": 1
+},
+{
+"name": "10x39",
+"changeflag": 1
+},
+{
+"name": "10x47",
+"changeflag": 0
+},
+{
+"name": "11x28",
+"changeflag": 0
+},
+{
+"name": "11x30",
+"changeflag": 0
+},
+{
+"name": "11x34",
+"changeflag": 0
+},
+{
+"name": "11x40",
+"changeflag": 1
+},
+{
+"name": "11x41",
+"changeflag": 1
+},
+{
+"name": "11x44",
+"changeflag": 1
+},
+{
+"name": "11x45",
+"changeflag": 1
+},
+{
+"name": "12x27",
+"changeflag": 0
+},
+{
+"name": "12x34",
+"changeflag": 0
+},
+{
+"name": "12x35",
+"changeflag": 1
+},
+{
+"name": "12x44",
+"changeflag": 1
+},
+{
+"name": "13x18",
+"changeflag": 1
+},
+{
+"name": "13x31",
+"changeflag": 1
+},
+{
+"name": "13x38",
+"changeflag": 1
+},
+{
+"name": "13x39",
+"changeflag": 1
+},
+{
+"name": "13x40",
+"changeflag": 1
+},
+{
+"name": "13x41",
+"changeflag": 1
+},
+{
+"name": "13x46",
+"changeflag": 0
+},
+{
+"name": "14x24",
+"changeflag": 0
+},
+{
+"name": "14x34",
+"changeflag": 1
+},
+{
+"name": "14x43",
+"changeflag": 1
+},
+{
+"name": "14x49",
+"changeflag": 0
+},
+{
+"name": "15x19",
+"changeflag": 1
+},
+{
+"name": "15x23",
+"changeflag": 0
+},
+{
+"name": "15x35",
+"changeflag": 1
+},
+{
+"name": "15x41",
+"changeflag": 0
+},
+{
+"name": "16x4",
+"changeflag": 0
+},
+{
+"name": "16x17",
+"changeflag": 1
+},
+{
+"name": "16x22",
+"changeflag": 1
+},
+{
+"name": "16x26",
+"changeflag": 0
+},
+{
+"name": "16x27",
+"changeflag": 1
+},
+{
+"name": "16x50",
+"changeflag": 0
+},
+{
+"name": "17x33",
+"changeflag": 1
+},
+{
+"name": "17x35",
+"changeflag": 1
+},
+{
+"name": "17x36",
+"changeflag": 1
+},
+{
+"name": "17x37",
+"changeflag": 1
+},
+{
+"name": "17x45",
+"changeflag": 0
+},
+{
+"name": "17x46",
+"changeflag": 0
+},
+{
+"name": "17x48",
+"changeflag": 0
+},
+{
+"name": "18x6",
+"changeflag": 0
+},
+{
+"name": "18x23",
+"changeflag": 1
+},
+{
+"name": "18x24",
+"changeflag": 1
+},
+{
+"name": "18x26",
+"changeflag": 1
+},
+{
+"name": "18x29",
+"changeflag": 0
+},
+{
+"name": "18x30",
+"changeflag": 0
+},
+{
+"name": "18x34",
+"changeflag": 1
+},
+{
+"name": "18x37",
+"changeflag": 1
+},
+{
+"name": "18x41",
+"changeflag": 0
+},
+{
+"name": "18x42",
+"changeflag": 0
+},
+{
+"name": "18x46",
+"changeflag": 0
+},
+{
+"name": "19x22",
+"changeflag": 1
+},
+{
+"name": "19x32",
+"changeflag": 1
+},
+{
+"name": "19x36",
+"changeflag": 0
+},
+{
+"name": "19x37",
+"changeflag": 1
+},
+{
+"name": "19x38",
+"changeflag": 0
+},
+{
+"name": "19x40",
+"changeflag": 0
+},
+{
+"name": "20x28",
+"changeflag": 0
+},
+{
+"name": "20x33",
+"changeflag": 1
+},
+{
+"name": "20x35",
+"changeflag": 1
+},
+{
+"name": "20x36",
+"changeflag": 1
+},
+{
+"name": "20x40",
+"changeflag": 1
+},
+{
+"name": "20x46",
+"changeflag": 0
+},
+{
+"name": "20x49",
+"changeflag": 1
+},
+{
+"name": "21x29",
+"changeflag": 0
+},
+{
+"name": "21x33",
+"changeflag": 1
+},
+{
+"name": "21x38",
+"changeflag": 1
+},
+{
+"name": "21x41",
+"changeflag": 0
+},
+{
+"name": "22x16",
+"changeflag": 1
+},
+{
+"name": "23x14",
+"changeflag": 1
+},
+{
+"name": "23x15",
+"changeflag": 1
+},
+{
+"name": "23x17",
+"changeflag": 0
+},
+{
+"name": "23x30",
+"changeflag": 1
+},
+{
+"name": "23x34",
+"changeflag": 1
+},
+{
+"name": "23x36",
+"changeflag": 1
+},
+{
+"name": "24x15",
+"changeflag": 1
+},
+{
+"name": "24x19",
+"changeflag": 1
+},
+{
+"name": "25x16",
+"changeflag": 1
+},
+{
+"name": "25x18",
+"changeflag": 0
+},
+{
+"name": "25x27",
+"changeflag": 1
+},
+{
+"name": "25x33",
+"changeflag": 1
+},
+{
+"name": "26x17",
+"changeflag": 1
+},
+{
+"name": "26x20",
+"changeflag": 1
+},
+{
+"name": "26x26",
+"changeflag": 1
+},
+{
+"name": "26x30",
+"changeflag": 1
+},
+{
+"name": "27x13",
+"changeflag": 0
+},
+{
+"name": "27x17",
+"changeflag": 1
+},
+{
+"name": "27x22",
+"changeflag": 1
+},
+{
+"name": "27x24",
+"changeflag": 1
+},
+{
+"name": "27x25",
+"changeflag": 1
+},
+{
+"name": "27x46",
+"changeflag": 1
+},
+{
+"name": "27x47",
+"changeflag": 1
+},
+{
+"name": "28x18",
+"changeflag": 1
+},
+{
+"name": "28x19",
+"changeflag": 1
+},
+{
+"name": "28x24",
+"changeflag": 1
+},
+{
+"name": "29x4",
+"changeflag": 1
+},
+{
+"name": "29x24",
+"changeflag": 1
+},
+{
+"name": "29x48",
+"changeflag": 0
+},
+{
+"name": "30x5",
+"changeflag": 1
+},
+{
+"name": "30x19",
+"changeflag": 1
+},
+{
+"name": "30x47",
+"changeflag": 0
+},
+{
+"name": "31x3",
+"changeflag": 1
+},
+{
+"name": "31x26",
+"changeflag": 1
+},
+{
+"name": "31x47",
+"changeflag": 0
+},
+{
+"name": "32x31",
+"changeflag": 1
+},
+{
+"name": "32x35",
+"changeflag": 0
+},
+{
+"name": "33x5",
+"changeflag": 1
+},
+{
+"name": "33x12",
+"changeflag": 1
+},
+{
+"name": "33x38",
+"changeflag": 1
+},
+{
+"name": "33x47",
+"changeflag": 0
+},
+{
+"name": "34x9",
+"changeflag": 0
+},
+{
+"name": "34x18",
+"changeflag": 1
+},
+{
+"name": "34x38",
+"changeflag": 1
+},
+{
+"name": "35x0",
+"changeflag": 1
+},
+{
+"name": "35x22",
+"changeflag": 1
+},
+{
+"name": "35x40",
+"changeflag": 1
+},
+{
+"name": "37x8",
+"changeflag": 0
+},
+{
+"name": "39x13",
+"changeflag": 1
+},
+{
+"name": "39x16",
+"changeflag": 1
+},
+{
+"name": "40x0",
+"changeflag": 1
+},
+{
+"name": "40x3",
+"changeflag": 1
+},
+{
+"name": "40x15",
+"changeflag": 1
+},
+{
+"name": "41x1",
+"changeflag": 0
+},
+{
+"name": "41x31",
+"changeflag": 1
+},
+{
+"name": "41x32",
+"changeflag": 1
+},
+{
+"name": "42x31",
+"changeflag": 1
+},
+{
+"name": "43x6",
+"changeflag": 0
+},
+{
+"name": "43x10",
+"changeflag": 1
+},
+{
+"name": "43x18",
+"changeflag": 0
+},
+{
+"name": "43x44",
+"changeflag": 0
+},
+{
+"name": "44x11",
+"changeflag": 1
+},
+{
+"name": "44x33",
+"changeflag": 0
+},
+{
+"name": "48x43",
+"changeflag": 0
+},
+{
+"name": "48x45",
+"changeflag": 0
+},
+{
+"name": "48x46",
+"changeflag": 0
+},
+{
+"name": "48x48",
+"changeflag": 0
+}
+]
+}
