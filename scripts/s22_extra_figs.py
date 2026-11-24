@@ -112,7 +112,7 @@ def roc(score, y):
 
 def evidence_fig():
     refs, names, y = load("levir_cc")
-    fig, (a, b) = plt.subplots(1, 2, figsize=(7.0, 2.7), gridspec_kw={"wspace": 0.28})
+    fig, (a, b) = plt.subplots(1, 2, figsize=(5.45, 2.6), gridspec_kw={"wspace": 0.32})
     series = [("dinov2_b", "DINOv2-B", "#2a78d6"), ("rclip_l14", "RemoteCLIP-L/14", "#1baf7a"),
               ("own:rscama", "RSCaMa's own features", "#eb6834"), ("pixdiff", "pixel difference", "#52514e")]
     aucs = {}
@@ -135,20 +135,19 @@ def evidence_fig():
         cnt = np.where(cnt > 0, cnt, 0.7)
         b.stairs(cnt, bins, baseline=0.7, fill=True, color=col, alpha=0.22, zorder=2)
         b.stairs(cnt, bins, baseline=0.7, color=col, lw=1.4, label=lab, zorder=3)
-    b.set_yscale("log"); b.set_xlim(0, 1); b.set_ylim(0.7, None)
+    b.set_yscale("log"); b.set_xlim(0, 1); b.set_ylim(0.7, 8000)
     vlm = json.loads((V2 / "outputs" / "audit" / f"qwen3vl_levir_cc_{ENC}_{KIND}.json").read_text(encoding="utf-8"))
     rsc = json.loads((V2 / "outputs" / "audit" / f"rscama_levir_cc_{ENC}_{KIND}.json").read_text(encoding="utf-8"))
     t_c = vlm["correction"]["threshold_from_val"]; t_f = rsc["flags"]["5%"]["threshold_from_val"]
-    top = b.get_ylim()[1]
-    for t, lab, col, ha, dx in ((t_c, f"$t_c$ = {t_c:.3f} (VLM)", "#1baf7a", "left", 0.02),
-                                (t_f, f"$t_f$ = {t_f:.2f} (RSCaMa, 5%)", INK2, "right", -0.02)):
+    for t, lab, col, ha, dx in ((t_c, "$t_c$ (VLM)", "#1baf7a", "left", 0.025),
+                                (t_f, "$t_f$ (RSCaMa, 5%)", INK2, "right", -0.025)):
         b.axvline(t, color=col, lw=1.1, ls=(0, (3, 2)), zorder=4)
-        b.text(t + dx, top * 0.12, lab, color=col, fontsize=7, va="top", ha=ha, zorder=5,
+        b.text(t + dx, 150, lab, color=col, fontsize=6.8, va="top", ha=ha, zorder=5,
                bbox=dict(boxstyle="square,pad=0.15", facecolor="white", edgecolor="none", alpha=0.9))
     b.set_xlabel("Evidence score $p$(change)"); b.set_ylabel("Test pairs (log scale)")
     b.grid(axis="y", color=GRID, lw=0.5); b.set_axisbelow(True)
-    b.legend(loc="upper center", frameon=False, bbox_to_anchor=(0.5, 1.0))
-    title(b, "b", "Evidence score by true change state")
+    b.legend(loc="upper center", frameon=False, bbox_to_anchor=(0.44, 1.02), fontsize=7, handlelength=1.6)
+    title(b, "b", "Evidence score by true state")
     fig.savefig(FIGS / "fig_evidence.pdf"); plt.close(fig)
     return aucs
 
@@ -156,7 +155,7 @@ def evidence_fig():
 def tradeoff_fig():
     refs, names, y = load("levir_cc")
     p = s9.evidence(KIND, ENC, "levir_cc", refs, "test", names)
-    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8), gridspec_kw={"wspace": 0.3})
+    fig, axes = plt.subplots(1, 2, figsize=(5.45, 2.7), gridspec_kw={"wspace": 0.34})
     out = {}
     for ax, cap, tag in ((axes[0], "qwen3vl", "a"), (axes[1], "rscama", "b")):
         c = claims(cap, "levir_cc", names)
@@ -184,8 +183,8 @@ def tradeoff_fig():
                 ax.annotate(lab, (xs, ys), xytext=(fx * xmax, fy * hall), textcoords="data", fontsize=7, color=INK,
                             va="center", arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.6, shrinkA=1, shrinkB=5))
         else:  # points crowd at the origin: label them with leader lines
-            place = {"ours": ((40, 3.2), "ours: no correction (abstains)"),
-                     "evidence": None, "CIDEr": ((40, 1.4), "CIDEr-optimal: 3 corrections, all wrong")}
+            place = {"ours": ((62, 4.2), "ours: no correction\n(abstains)"),
+                     "evidence": None, "CIDEr": ((62, 1.7), "CIDEr-optimal:\n3 corrections, all wrong")}
             for lab, xs, ys, mk, sz in ops:
                 key = lab.split()[0].split("-")[0]
                 if key == "evidence":
@@ -196,10 +195,10 @@ def tradeoff_fig():
                             arrowprops=dict(arrowstyle="-", color=MUTED, lw=0.6, shrinkA=1, shrinkB=4))
         ax.set_xlim(0, xmax)
         ax.set_ylim(0, hall * 1.12)
-        ax.set_xlabel("Real changes silenced (wrong corrections)")
+        ax.set_xlabel("Real changes silenced")
         ax.set_ylabel("Hallucinated changes removed")
         ax.grid(color=GRID, lw=0.5); ax.set_axisbelow(True)
-        title(ax, tag, f"{NAME[cap]}: correction trade-off")
+        title(ax, tag, f"{NAME[cap]}")
     fig.savefig(FIGS / "fig_tradeoff.pdf"); plt.close(fig)
     return out
 
@@ -213,7 +212,7 @@ def cost_fig():
     refs, names, y = load("levir_cc")
     p = s9.evidence(KIND, ENC, "levir_cc", refs, "test", names)
     r = np.logspace(-1, 2, 400)
-    fig, axes = plt.subplots(1, 2, figsize=(7.0, 2.8), gridspec_kw={"wspace": 0.28})
+    fig, axes = plt.subplots(1, 2, figsize=(5.45, 2.8), gridspec_kw={"wspace": 0.3})
     out = {}
     for ax, cap, tag in ((axes[0], "qwen3vl", "a"), (axes[1], "rscama", "b")):
         c = claims(cap, "levir_cc", names)
@@ -254,10 +253,10 @@ def cost_fig():
         ax.set_xlabel("Cost of a missed change / cost of a false alert ($r$)")
         ax.set_ylabel("Cost relative to captioner alone")
         ax.grid(color=GRID, lw=0.5); ax.set_axisbelow(True)
-        title(ax, tag, f"{NAME[cap]}: expected cost of correction rules")
+        title(ax, tag, f"{NAME[cap]}")
     axes[1].plot([], [], color=MUTED, lw=1.0, ls=(0, (1, 1.5)), label="best threshold on test (oracle)")
     h, l = axes[1].get_legend_handles_labels()
-    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=5, frameon=False, handlelength=2.2,
+    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 0.0), ncol=3, frameon=False, handlelength=2.2,
                columnspacing=1.2)
     fig.savefig(FIGS / "fig_cost.pdf"); plt.close(fig)
     return out

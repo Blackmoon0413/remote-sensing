@@ -83,6 +83,7 @@ Notes:
 | 17 | `s17_build_submission.py` | builds the submission package |
 | 18 | `s18_cases.py` | case-study figure: one pair per audit outcome, chosen by a fixed rule (p closest to the outcome median) |
 | 23 | `s23_export_per_sample.py` | per-sample evidence probabilities and audit decisions, checked against the audit JSONs |
+| 24 | `s24_more_figs.py` | evidence gallery (pairs chosen by a fixed rule in `s21`), evidence by claim and true state, robustness heatmaps |
 
 All thresholds and the evidence configuration are selected on the validation split; the test split is used once.
 

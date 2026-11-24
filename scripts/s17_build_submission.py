@@ -24,7 +24,8 @@ MS = V2 / "manuscript"
 SUB = V2 / "submission"
 FIGS = ["fig_workflow.pdf", "fig_workflow.tex", "test_000002_A.png", "test_000002_B.png",
         "fig_flag_recovery.pdf", "fig_fp_fn.pdf", "fig_cases.pdf", "fig_cases.tex",
-        "fig_error_profile.pdf", "fig_evidence.pdf", "fig_tradeoff.pdf", "fig_cost.pdf"]
+        "fig_error_profile.pdf", "fig_evidence.pdf", "fig_tradeoff.pdf", "fig_cost.pdf",
+        "fig_gallery.pdf", "fig_cells.pdf", "fig_robust.pdf"]
 FIG_DIRS = ["cases", "maps"]  # image pairs and patch-change maps used by fig_cases.tex / fig_workflow.tex
 REPO = "rsicc-change-state-audit"
 

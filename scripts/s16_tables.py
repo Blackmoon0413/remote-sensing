@@ -37,6 +37,7 @@ PUBLISHED = {"rscama": {"B4": 65.24, "CIDEr": 136.56}, "promptcc": {"B4": 63.54,
              "change3d": {"B4": 64.38, "CIDEr": 138.29}}
 DATASETS = [("levir_cc", "LEVIR-CC"), ("dubai_cc", "Dubai-CC")]
 M7 = ("B1", "B2", "B3", "B4", "METEOR", "ROUGE_L", "CIDEr")
+M_CAP = ("B4", "METEOR", "ROUGE_L", "CIDEr")  # caption-quality table (text width); BLEU-1..3 stay in the result files
 ENCS = ["dinov2_b", "rclip_l14", "rclip_b32", "pixdiff", "own"]
 ENC_NAMES = {"dinov2_b": "DINOv2-B", "rclip_l14": "RemoteCLIP-L/14", "rclip_b32": "RemoteCLIP-B/32",
              "pixdiff": "Pixel difference", "own": "Captioner's own features"}
@@ -92,14 +93,14 @@ def main() -> None:
             own = json.loads(own_f.read_text(encoding="utf-8")) if (own_f.exists() and ds == "levir_cc") else None
             data.append((label, src, s, b, own, pub))
         # best value per column within the dataset is set in bold (as in comparison tables of the field)
-        best = {m: max(round(d[2][m], 2) for d in data) for m in M7}
+        best = {m: max(round(d[2][m], 2) for d in data) for m in M_CAP}
         fp_r = [100 * d[3]["FP"] / max(d[3]["FP"] + d[3]["TN"], 1) for d in data]
         fn_r = [100 * d[3]["FN"] / max(d[3]["FN"] + d[3]["TP"], 1) for d in data]
         acc = [d[3]["acc"] for d in data]
         bold = lambda txt, on: f"\\textbf{{{txt}}}" if on else txt  # noqa: E731
         for i, (label, src, s, b, own, pub) in enumerate(data):
             cg.append(f"{'' if cg else dsn} & {label} & {src} & " +
-                      " & ".join(bold(f2(s[m]), round(s[m], 2) == best[m]) for m in M7) +
+                      " & ".join(bold(f2(s[m]), round(s[m], 2) == best[m]) for m in M_CAP) +
                       (f" & {own['Bleu_4']:.2f} / {own['CIDEr']:.2f}" if own else " & --") +
                       (f" & {pub['B4']:.2f} / {pub['CIDEr']:.2f}" if pub else " & --") + r" \\")
             eg.append(f"{'' if eg else dsn} & {label} & "
@@ -154,7 +155,7 @@ def main() -> None:
                       f"{arrow(b0['FP'], b1['FP'])} & {arrow(b0['FN'], b1['FN'])} & "
                       f"{arrow(f2(sb['B4']), f2(sa['B4']))} & {arrow(f2(sb['CIDEr']), f2(sa['CIDEr']))} & {ptxt} \\\\")
             cprec = f"{100 * cc['test_acts_correct'] / cc['test_acts']:.1f}\\%" if cc["test_acts"] else "--"
-            cells = ("\\quad CIDEr-optimal threshold", str(cc["test_acts"]), cprec,
+            cells = ("\\quad CIDEr-optimal", str(cc["test_acts"]), cprec,
                      arrow(b0["FP"], cc["binary"]["FP"]), arrow(b0["FN"], cc["binary"]["FN"]),
                      arrow(f2(sb["B4"]), f2(cc["scores"]["B4"])), arrow(f2(sb["CIDEr"]), f2(cc["scores"]["CIDEr"])))
             cg.append(" & " + " & ".join(f"\\alt{{{t}}}" for t in cells) + " & \\\\")
@@ -207,7 +208,7 @@ def main() -> None:
                          for x, s in zip(cells, star)]
                 if last_cap is not None and cap != last_cap:
                     rows.append(SPACER)
-                rows.append(f"{'' if last_cap else dsn} & {SHORT[cap] if cap != last_cap else ''} & {ENC_NAMES[enc]} & "
+                rows.append(f"{'' if last_cap else dsn} & {SHORT[cap] if cap != last_cap else ''} & {'Own features' if enc == 'own' else ENC_NAMES[enc]} & "
                             f"{total} & " + " & ".join(corr) + " & " + " & ".join(found) + " \\\\")
                 last_cap = cap
         rob_groups.append(rows)

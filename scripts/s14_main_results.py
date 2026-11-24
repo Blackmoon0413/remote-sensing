@@ -146,9 +146,9 @@ def main() -> None:
     fig.savefig(figs / "fig_flag_recovery.pdf"); fig.savefig(figs / "fig_flag_recovery.png", dpi=300)
     plt.close(fig)
     # ---- FP / FN bars
-    fig, axes = plt.subplots(1, 2, figsize=(6.8, 2.6), gridspec_kw={"wspace": 0.2})
+    fig, axes = plt.subplots(1, 2, figsize=(5.45, 2.6), gridspec_kw={"wspace": 0.24})
     src = {"RSCaMa": "released", "PromptCC": "released", "Change3D": "retrained", "Qwen3-VL-4B": "zero-shot"}
-    labs = [f"{n}\n{src.get(n, '')}" for n in (r["captioner"].split(" (")[0] for r in rows)]
+    labs = [f"{n.replace('Qwen3-VL-4B', 'Qwen3-VL')}\n{src.get(n, '')}" for n in (r["captioner"].split(" (")[0] for r in rows)]
     for ax, key, tag, title in ((axes[0], "FP", "a", "Hallucinated changes (FP)"), (axes[1], "FN", "b", "Missed changes (FN)")):
         b = [r["binary"]["base"][key] for r in rows]; a = [r["binary"]["audited"][key] for r in rows]
         if key == "FN":  # flagged-and-confirmed misses at the 5% budget count as recovered
@@ -161,7 +161,7 @@ def main() -> None:
         for i, (u, v) in enumerate(zip(b, a)):
             ax.text(i - w / 2 - 0.01, u + top * 0.015, str(u), ha="center", va="bottom", fontsize=7, color=INK2)
             ax.text(i + w / 2 + 0.01, v + top * 0.015, str(v), ha="center", va="bottom", fontsize=7, color=INK)
-        ax.set_xticks(xx, labs, fontsize=7, linespacing=1.25)
+        ax.set_xticks(xx, labs, fontsize=6.6, linespacing=1.2)
         for t in ax.get_xticklabels():
             t.set_color(INK)
         ax.tick_params(axis="x", length=0, pad=4); ax.set_xlim(-0.6, len(rows) - 0.4)
