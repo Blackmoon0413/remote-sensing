@@ -2,7 +2,7 @@
 
 Code, per-sample results and audit decisions for the paper
 *"Auditing Change-State Errors in Remote Sensing Image Change Captioning with Frozen Foundation-Model Evidence"*
-by Hongyi Chu, Fanqi Chu, Han Shu, Le-Minh Nguyen and Hao Hao (submitted to *Remote Sensing*, MDPI).
+by Hongyi Chu, Fanqi Chu, Han Shu and Hao Hao (submitted to *Remote Sensing*, MDPI).
 <!-- TODO: add DOI and citation after acceptance -->
 
 A change caption implicitly claims that *something changed* or that *nothing changed*. This repository measures
